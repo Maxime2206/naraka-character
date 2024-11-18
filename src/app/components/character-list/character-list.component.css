@@ -1,16 +1,194 @@
 .character-card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 16px;
-    margin: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 16px;
+    background: linear-gradient(135deg, #ffffff 50%, #e74c3c 50%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
   }
+  
+  .character-card:hover {
+    background: linear-gradient(135deg, #ffffff 30%, #e74c3c 70%);
+  }
+  
   .character-card h2 {
     color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
   }
+  
+  .character-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 8px 0;
+  }
+  
   .character-image {
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 8px;
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
+  .character-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-name {
+    color: #c0392b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .character-description {
+    color: #95a5a6;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .character-card .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #c0392b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .character-card .button:hover {
+    background-color: #e74c3c;
+  }
+  
+  .character-card .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
+  }
+  
+  .character-card .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ecf0f1;
+  }
+  
+  .character-card .stats div {
+    text-align: center;
+  }
+  
+  .character-card .stats div span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .character-card .stats div p {
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  .character-card .character-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .character-card .description-expanded {
+    display: none;
+    color: #7f8c8d;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  .character-card .description-expanded.active {
+    display: block;
+  }
+  
+  .character-card .expand-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .character-card .expand-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .character-card .expand-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .character-card {
+      padding: 16px;
+      margin: 10px;
+    }
+  
+    .character-image {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .character-card h2 {
+      font-size: 1.6rem;
+    }
+  
+    .character-name {
+      font-size: 1.3rem;
+    }
+  
+    .character-description {
+      font-size: 0.9rem;
+    }
+  
+    .character-card .button {
+      font-size: 0.9rem;
+    }
+  
+    .character-card .stats {
+      flex-direction: column;
+    }
+  
+    .character-card .stats div {
+      margin-bottom: 10px;
+    }
+  }
+  
